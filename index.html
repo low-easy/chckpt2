@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <form action="/usuario/cadastro" method="GET" id="usrcad">
+        <fieldset form="usrcad">
+         
+          <div>
+            <legend class="dados">Dados Pessoais</legend>
+            <label for="nome">Nome: *</label>
+            <input type="text" name="nome" id="geral" required placeholder="Insira seu nome aqui">
+          </div>
+  
+          <div>
+            <label for="email">Email: *</label>
+            <input type="email" name="email" id="geral" required placeholder="Insira seu email">
+          </div>
+  
+          <div>
+            <label for="telefone">Telefone: *</label>
+            <input type="number" name="telefone" id="geral" required placeholder="(xx)xxxx-xxxx">
+          </div>
+  
+  
+          <div>
+            <label for="data">Data de nascimento: *</label>
+            <input type="date" name="data" id="geral" value="2021-09-31" min="1980-01-01" max="2022-12-31" required>
+          </div>
+  
+          <div>
+              <p><b>Você tem 18 anos ou mais? *</b></p>
+              <input type="radio" name="maioridade" value="mais18" id="geral" > <label for="mais18">Sim</label>
+  
+              <input type="radio" name="maioridade" value="menos18" id="geral"> <label for="menos18">Não</label>
+            </div>
+        </fieldset>
+  
+        <fieldset form="usrcad">
+          <div>
+            <legend class="dados">Interesses</legend>
+              <label for="carro">Selecione um ponto turístico que mais te interessa:</label>
+              <select name="pontoTuristico" id="geral">
+                  <optgroup label="Pontos Turísticos" id="pontos">
+                    <option value="masp" >Farol da Barra</option>
+                    <option value="ibirapuera">Elevador Lacerda</option>
+                    <option value="municipal">Ilha de Itaparica</option>
+                    <option value="copan">Linha verde</option>
+              </select>
+  
+              <div>
+                  <p>Selecione quais os seus interesses na cidade: <i>(Opcional)</i></p>
+                  <input type="checkbox" name="interesses" value="turista" id="geral"> <label for="turista">Turista</label>
+                  <input type="checkbox" name="interesses" value="residente" id="geral"> <label for="residente">Residente</label>
+                  <input type="checkbox" name="interesses" value="estudante" id="geral"> <label for="estudante">Estudante</label>
+              </div>
+            </div>
+        </fieldset>
+        <fieldset>
+          <div id="buttons">
+            <button type="reset">Limpar</button>
+            <button type="submit">Enviar</button>
+          </div>
+        </fieldset>
+
+
+    </form>
+</body>
+</html>
